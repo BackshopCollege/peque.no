@@ -4,6 +4,11 @@ body {
   color: #191919;
   font-family: 'Open Sans', sans-serif;
 }
+
+h1 {
+ font-family: 'Open Sans Condensed', sans-serif;
+}
+
 #header {
   overflow: hidden;
 }
@@ -12,7 +17,6 @@ body {
   margin: 0 20px;
   width: 150px;
   float: left;
-  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 #menu {
@@ -23,7 +27,61 @@ body {
   display: inline-block;
 }
 
+#app {
+  overflow: hidden;
+}
+
 /********************************/
+
+#login {
+  display: none;
+  color: white;
+  width: 150px;
+  position: absolute;
+  margin: 0 auto;
+  top: 3%;
+  left: 50%;
+  margin-left: -75px;
+  padding: 20px 50px;
+  background-color: rgba(0,0,0,.9);
+  text-align:center;
+}
+
+#login h1 {
+  margin: 0
+}
+
+#login input {
+  display: block;
+  width: 100%;
+}
+
+/********************************/
+#dashboard_menu {
+  width: 150px;
+  background-color: rgba(0,0,0,.3);
+  position: absolute;
+  left: 0
+  top:0;
+}
+
+#app_area {
+  width: 100%;
+  padding-left: 290px;
+}
+
+#app_area form {
+  padding: 20px;
+}
+
+#result_area {
+  height: 100px;
+  width: 40%;
+  border: 1px solid black;
+}
+
+/********************************/
+
 #app {
   display: block;
   width: 90%;

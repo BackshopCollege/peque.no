@@ -7,16 +7,48 @@
       <link rel="stylesheet" href="css/pequeno.css">
   </head>
   <body>
-     
+    <div id="login">
+      <h1>Login</h1>
+      <span id="close-login">x</span>
+      <form action="#" method="post" accept-charset="utf-8">
+        <input type="text" name="user" value="" placeholder="User">
+        <input type="password" name="password" value="" placeholder="Password">
+        <input type="submit" name="submit" value="Join" id="join">
+      </form>
+
+    </div>
+
     <header id="header" class="">
-      <h1>Peque.NO</h1>
+      <h1><a href="#" title="Home">Peque.NO</a></h1>
       <ul id="menu">
-        <li><a href="#" title="Home">Login</a></li>
+        <li><a href="#login" title="Home">Login</a></li>
       </ul>
     </header><!-- /header -->
 
     <section id="app">
-      <div id="url_list">
+    </section>
+
+
+
+    <footer id="footer">
+      Peque.no, a <a href="https://github.com/BackshopCollege" title="Backshop College">Backshop College</a>
+      project. 
+      <img src="img/gracias.png" alt="Gracias ;)" id="gracias">
+      Gracias ;)
+    </footer>
+
+
+<script id="line_template" type="text/template"  charset="utf-8" > 
+<tr> 
+  <td><a href="#" title="enter">peque.no/<%= slang %></a></td>
+  <td><%= clicks %> clicks</td>
+  <td><%= when %></td>
+</tr>  
+</script>
+
+
+<script id="home_template" type="text/template" charset="utf-8" >
+     <div id="url_list">
         <table>
           <thead>
             <tr>
@@ -25,61 +57,11 @@
               <th>when</th>
             </tr>
           </thead>
-
           <tbody>
-            <tr> 
-              <td><a href="#" title="enter">peque.no/98798</a></td>
-              <td>90 clicks</td>
-              <td>14/10/2010</td>
-            </tr>
-            <tr>
-              <td><a href="#" title="enter">peque.no/asdasd</a></td>
-              <td>10 clicks</td>
-              <td>22/2/2010</td>
-            </tr>
-            <tr>
-              <td><a href="#" title="enter">peque.no/dadqwd</a></td>
-              <td>9 clicks</td>
-              <td>30/9/2010</td>
-            </tr>
-            <tr>
-              <td><a href="#" title="enter">peque.no/sthstrh</a></td>
-              <td>7 clicks</td>
-              <td>11/7/2010</td>
-            </tr>
-            <tr>
-              <td><a href="#" title="enter">peque.no/aefaeae</a></td>
-              <td>14 clicks</td>
-              <td>19/3/2010</td>
-            </tr>
-            <tr>
-              <td><a href="#" title="enter">peque.no/agrger</a></td>
-              <td>12 clicks</td>
-              <td>2/4/2010</td>
-            </tr>
-            <tr>
-              <td><a href="#" title="enter">peque.no/dadqwd</a></td>
-              <td>9 clicks</td>
-              <td>30/9/2010</td>
-            </tr>
-            <tr>
-              <td><a href="#" title="enter">peque.no/sthstrh</a></td>
-              <td>7 clicks</td>
-              <td>11/7/2010</td>
-            </tr>
-            <tr>
-              <td><a href="#" title="enter">peque.no/aefaeae</a></td>
-              <td>14 clicks</td>
-              <td>19/3/2010</td>
-            </tr>
-            <tr>
-              <td><a href="#" title="enter">peque.no/agrger</a></td>
-              <td>12 clicks</td>
-              <td>2/4/2010</td>
-            </tr>
           </tbody>
         </table>
       </div>
+
       <div id="description">
         <h1>Peque.NO</h1>
         <p>
@@ -102,18 +84,36 @@
           </p>
         </p>
       </div>
-    </section>
+</script>
+
+<script id="dashboard_template" type="text/template" charset="utf-8" >
+   <nav id="dashboard_menu">
+        <ul>
+            <li><a href="#" title="Add new">Add new</a></li>
+            <li><a href="#" title="List all">List all</a></li>
+            <li><a href="#" title="Config">Config</a></li>
+          </ul>
+      </nav>
+
+      <div id="app_area">
+        
+        <form action="#" method="post" accept-charset="utf-8">
+          <input type="text" name="url" value="" placeholder="Past your url here">
+          <input type="submit" name="" value="creat the beast">
+        </form>
+        <div id="result_area">
+          
+        </div>
+      </div>
+</script>
 
 
 
-    <footer id="footer">
-      Peque.no, a <a href="https://github.com/BackshopCollege" title="Backshop College">Backshop College</a>
-      project. 
-      <img src="img/gracias.png" alt="Gracias ;)" id="gracias">
-      Gracias ;)
-    </footer>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     <script src="/js/underscore.js" type="text/javascript" charset="utf-8" ></script>
     <script src="/js/backbone.js" type="text/javascript" charset="utf-8" ></script>
     <script src="/js/pequeno.js" type="text/javascript" charset="utf-8" ></script>
+    <script src="/js/routes.js" type="text/javascript" charset="utf-8" ></script>
   </body>
 </html>
