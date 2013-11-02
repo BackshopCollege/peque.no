@@ -1,0 +1,59 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300);
+
+body {
+  color: #191919;
+  font-family: 'Open Sans', sans-serif;
+}
+#header {
+  overflow: hidden;
+}
+
+#header h1 {
+  margin: 0 20px;
+  width: 150px;
+  float: left;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#menu {
+  float: right;
+}
+
+#menu li {
+  display: inline-block;
+}
+
+/********************************/
+#app {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  border: 1px solid black;
+  border-width: 1px 0; 
+  padding: 10px 0;
+  overflow: hidden;
+}
+
+#url_list {
+  width: 60%;
+  float: left;
+}
+
+#url_list table {
+  width: 100%;
+}
+#description {
+  width: 38%;
+  float: right;
+}
+
+
+/********************************/
+
+#footer {
+  text-align: center;
+}
+
+#gracias {
+  width: 32px;
+}
