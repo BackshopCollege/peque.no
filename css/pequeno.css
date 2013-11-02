@@ -114,4 +114,6 @@ h1 {
 
 #gracias {
   width: 32px;
+  display: block;
+  margin: 0 auto;
 }
