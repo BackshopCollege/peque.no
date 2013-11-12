@@ -9,6 +9,10 @@ h1 {
  font-family: 'Open Sans Condensed', sans-serif;
 }
 
+.order th {
+  cursor: pointer;
+}
+
 #header {
   overflow: hidden;
 }
@@ -33,8 +37,7 @@ h1 {
 
 /********************************/
 
-#login {
-  display: none;
+#login div {
   color: white;
   width: 150px;
   position: absolute;
@@ -63,6 +66,11 @@ h1 {
   position: absolute;
   left: 0
   top:0;
+}
+
+#dashboard_menu li.selected {
+  color: red;
+  font-weight: bold;
 }
 
 #app_area {

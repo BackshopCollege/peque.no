@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr class="order">
+      <th>url</th>
+      <th>clicks</th>
+      <th>when</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% _.each(urls, function(url) { %> 
+    <tr> 
+      <td><a href="#" title="enter">peque.no/<%= url.slang %></a></td>
+      <td><%= url.clicks %> clicks</td>
+      <td><%= url.when %></td>
+    </tr>  
+    <% } );%>
+  </tbody>
+</table>
