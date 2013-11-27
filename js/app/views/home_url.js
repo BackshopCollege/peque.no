@@ -2,8 +2,10 @@ define([
         'jquery',
         'underscore',
         'backbone',
-        'text!layouts/shared/home_url.html',
-], function ($, _, Backbone, homeTemplate) {
+        'app/models/url',
+        'app/collections/url',
+        'text!layouts/shared/home_url.html'
+], function ($, _, Backbone, Url, UrlCollection, homeTemplate) {
   'use strict';
 
   var View = Backbone.View.extend({
@@ -13,10 +15,15 @@ define([
       'click .order th': 'reorder_list'
     },
     initialize: function (options) {
-      this.render()
+      var list = new UrlCollection()
+      var that = this
+      list.fetch({success: function(){
+          console.log(list.models); // => 2 (collection have been populated)
+          that.render(list)
+      }});
     },
-    render: function() {
-      $(this.el).html(this.template(populate()))
+    render: function(data) {
+      $(this.el).html(this.template(data))
     },
     reorder_list: function(e){
       console.log("reorder by: " + e.target.innerText)
@@ -26,14 +33,3 @@ define([
 
 });
 
-function populate() {
-  return {
-    "urls": [
-      {
-        slang: "afwefawefa",
-        clicks: 12,
-        when: "a"
-      }
-    ]
-  }
-}

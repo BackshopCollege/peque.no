@@ -7,11 +7,11 @@
     </tr>
   </thead>
   <tbody>
-    <% _.each(urls, function(url) { %> 
+    <% _.each(models, function(url) {  %> 
     <tr> 
-      <td><a href="#" title="enter">peque.no/<%= url.slang %></a></td>
-      <td><%= url.clicks %> clicks</td>
-      <td><%= url.when %></td>
+      <td><a href="#" title="enter">peque.no/<%= url.get('slang') %></a></td>
+      <td><%= url.get('clicks') %> clicks</td>
+      <td><%= url.get('when') %></td>
     </tr>  
     <% } );%>
   </tbody>

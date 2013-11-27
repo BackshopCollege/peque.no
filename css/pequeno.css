@@ -59,6 +59,16 @@ h1 {
   width: 100%;
 }
 
+#login span {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  display: block;
+  box-shadow: -1px 1px 3px white;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+
 /********************************/
 #dashboard_menu {
   width: 150px;
